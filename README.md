@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="assets/logo.svg" width="96" alt="sol-astrizer">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
+    <img src="assets/logo-light.svg" width="88" alt="sol-astrizer">
+  </picture>
 </p>
 
 <h1 align="center">sol-astrizer</h1>

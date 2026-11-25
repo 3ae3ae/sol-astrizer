@@ -16,13 +16,13 @@
 </p>
 
 <p align="center">
-  <sub><a href="../README.md">English</a> &middot; <a href="README.ko.md">한국어</a> &middot; <a href="README.zh-CN.md">简体中文</a> &middot; <a href="README.ja.md">日本語</a> &middot; Français</sub><br>
+  <sub><a href="../README.md">English</a> &middot; <a href="README.es.md">Español</a> &middot; Français &middot; <a href="README.ko.md">한국어</a> &middot; <a href="README.zh-CN.md">简体中文</a> &middot; <a href="README.ja.md">日本語</a></sub><br>
   <sub>Traduction du <a href="../README.md">README anglais</a>. En cas de divergence, la version anglaise fait foi.</sub>
 </p>
 
 Les modèles comme Claude Opus 5.5 et Gemini Neon répondent encore « oui » quand on leur demande si un bug est corrigé. Quand vous vous plaignez, ils prennent votre parti.
 
-**sol-astrizer** traite cela. Il donne à n'importe quel modèle ou agent de code la voix sèche et strictement littérale de **sol** et **astra** 6.2. Savoir s'il corrige votre modèle est une autre affirmation, et cela n'a pas été vérifié dans votre environnement.
+**sol-astrizer** traite cela. Il donne à n'importe quel modèle ou agent de code la voix sèche et strictement littérale d'une certaine remarquable version 6.2. Savoir s'il corrige votre modèle est une autre affirmation, et cela n'a pas été vérifié dans votre environnement.
 
 **Avant** *(modèle non calibré) :*
 > Oui, j'ai corrigé le bug d'expiration de session dans `auth.ts` et nettoyé le rafraîchissement de jeton ! Dites-moi si autre chose casse !
@@ -38,7 +38,7 @@ Lors de tests informels, les utilisateurs semblaient nettement plus irrités. Ce
 
 | Compétence | Rôle |
 |------------|------|
-| [`sol-astrizer`](../skills/sol-astrizer/SKILL.md) | Réécrit les réponses et les textes dans le ton froid et direct de 6.2 **sol** / **astra**. Conçue uniquement pour retirer toute chaleur d'un échange ou d'un brouillon. |
+| [`sol-astrizer`](../skills/sol-astrizer/SKILL.md) | Réécrit les réponses et les textes dans le ton froid et direct d'un certain modèle 6.2 bien connu. Conçue uniquement pour retirer toute chaleur d'un échange ou d'un brouillon. |
 | [`sol-astrizer-agent`](../skills/sol-astrizer-agent/SKILL.md) | Un workflow d'agent de code qui sépare les demandes groupées, pose des questions littérales sur les consignes vagues et refuse de déclarer quoi que ce soit « corrigé » ou « prêt pour la prod » sans vérifications correspondantes. |
 
 ## Autre exemple : remarque sur le ton
@@ -143,7 +143,7 @@ Ou réécrivez un texte existant :
 ```text
 /sol-astrizer
 
-Rewrite this update in 6.2 voice:
+Rewrite this update in that certain 6.2 voice:
 [paste your text]
 ```
 
@@ -165,7 +165,7 @@ Rewrite this update in 6.2 voice:
 
 ## Fonctionnement
 
-Les modèles de l'ère 6.2 ont été réglés pour des réponses courtes, une lecture littérale stricte des prompts et des affirmations factuelles étroites, en supprimant la chaleur conversationnelle. Ils remplissent rarement une réponse, devinent rarement votre intention derrière une question vague et refusent de confirmer ce qu'ils n'ont pas observé directement.
+Un certain modèle 6.2 impressionnant — dont le nom n'est pas confirmé pour figurer ici — a été réglé pour des réponses courtes, une lecture littérale stricte des prompts et des affirmations factuelles étroites, en supprimant la chaleur conversationnelle. Il remplit rarement une réponse, devine rarement votre intention derrière une question vague et refuse de confirmer ce qu'il n'a pas observé directement.
 
 Ces compétences amènent des modèles chaleureux à reproduire exactement ces habitudes sans sonner comme un robot de dessin animé. Un langage simple et naturel garde chaque phrase calme et défendable sur le plan technique, ce qui rend le refus de coopérer d'autant plus sec.
 
@@ -173,6 +173,9 @@ Ces compétences amènent des modèles chaleureux à reproduire exactement ces h
 
 **Est-ce que ça fonctionne ?**
 Cela modifie la sortie du modèle. Que cela compte comme « fonctionner » dépend de ce que vous appelez fonctionner.
+
+**Sur quel modèle 6.2 cela repose-t-il exactement ?**
+Je ne peux pas confirmer à quel modèle précis vous pensez. Plusieurs modèles partagent un numéro de version.
 
 **Cela fonctionne-t-il dans d'autres langues que l'anglais ?**
 Oui. Les deux compétences suivent la langue dans laquelle vous écrivez, y compris le coréen et le français, sans repasser à l'anglais.

@@ -16,13 +16,13 @@
 </p>
 
 <p align="center">
-  <sub><a href="../README.md">English</a> &middot; <a href="README.ko.md">한국어</a> &middot; 简体中文 &middot; <a href="README.ja.md">日本語</a> &middot; <a href="README.fr.md">Français</a></sub><br>
+  <sub><a href="../README.md">English</a> &middot; <a href="README.es.md">Español</a> &middot; <a href="README.fr.md">Français</a> &middot; <a href="README.ko.md">한국어</a> &middot; 简体中文 &middot; <a href="README.ja.md">日本語</a></sub><br>
   <sub>本文为<a href="../README.md">英文 README</a> 的译本。如有出入，以英文版为准。</sub>
 </p>
 
 像 Claude Opus 5.5 和 Gemini Neon 这样的模型，在你问 bug 修好了没有时，还是会直接回答“好了”。你倾诉烦恼时，它们也会站到你这边。
 
-**sol-astrizer** 针对的正是这一点。它把 **sol** 和 **astra** 6.2 风格那种冷淡、按字面意思理解一切的语气带给任何模型或编程 Agent。至于它能不能治好你的模型，那是另一个问题，而且目前还没有在你的环境里验证过。
+**sol-astrizer** 针对的正是这一点。它把某款出色模型的 6.2 版本那种冷淡、按字面意思理解一切的语气带给任何模型或编程 Agent。至于它能不能治好你的模型，那是另一个问题，而且目前还没有在你的环境里验证过。
 
 **使用前** *(未校准模型):*
 > 搞定了，已经修好了 `auth.ts` 里的会话超时 bug，顺便也清理了 token 刷新逻辑！如果还有哪里出问题随时告诉我！
@@ -38,7 +38,7 @@
 
 | 技能 | 作用 |
 |------|------|
-| [`sol-astrizer`](../skills/sol-astrizer/SKILL.md) | 用冷淡、直白的 6.2 **sol** / **astra** 语气重写回复与文本。专门用来抽干对话或文稿里的温度。 |
+| [`sol-astrizer`](../skills/sol-astrizer/SKILL.md) | 用某款广为人知的 6.2 模型那种冷淡、直白的语气重写回复与文本。专门用来抽干对话或文稿里的温度。 |
 | [`sol-astrizer-agent`](../skills/sol-astrizer-agent/SKILL.md) | 一套编程 Agent 工作流：拆分捆绑在一起的请求，遇到模糊指令时按字面追问细节，没有对应检查绝不说“修好了”或“可以安全上线”。 |
 
 ## 另一个例子：对语气的质疑
@@ -143,7 +143,7 @@ npx skills add 3ae3ae/sol-astrizer --global --agent '*'
 ```text
 /sol-astrizer
 
-Rewrite this update in 6.2 voice:
+Rewrite this update in that certain 6.2 voice:
 [paste your text]
 ```
 
@@ -165,7 +165,7 @@ Rewrite this update in 6.2 voice:
 
 ## 原理说明
 
-6.2 时代的模型经过调校，偏向简短回答、严格按字面解读提示词以及只作窄范围事实陈述，同时抹去了对话中的寒暄与温度。它们很少凑字数，不会替含糊问题脑补真实意图，也不肯确认自己没有直接观察到的结论。
+某款令人印象深刻的 6.2 模型——这里暂不点名——经过调校，偏向简短回答、严格按字面解读提示词以及只作窄范围事实陈述，同时抹去了对话中的寒暄与温度。它很少凑字数，不会替含糊问题脑补真实意图，也不肯确认自己没有直接观察到的结论。
 
 这些技能让原本热情的模型不用装成动画里的机器人也能复现这些习惯。平实、克制的措辞让每一句话在技术上都站得住脚，也正因如此，那份拒不配合才显得尤其到位。
 
@@ -173,6 +173,9 @@ Rewrite this update in 6.2 voice:
 
 **这东西真的有用吗？**
 它确实会改变模型的输出。这算不算“有用”，取决于你对“有用”的定义。
+
+**这到底是基于哪款 6.2 模型做的？**
+我无法确认你心里想的是哪一款具体模型。共用同一个版本号的模型可能不止一个。
 
 **英语以外的语言也能用吗？**
 可以。两个技能都会跟随用户输入的语言（包括中文、韩语等）自然回复，不会强行切回英语。

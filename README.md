@@ -16,12 +16,12 @@
 </p>
 
 <p align="center">
-  <sub>English &middot; <a href="i18n/README.ko.md">한국어</a> &middot; <a href="i18n/README.zh-CN.md">简体中文</a> &middot; <a href="i18n/README.ja.md">日本語</a> &middot; <a href="i18n/README.fr.md">Français</a></sub>
+  <sub>English &middot; <a href="i18n/README.es.md">Español</a> &middot; <a href="i18n/README.fr.md">Français</a> &middot; <a href="i18n/README.ko.md">한국어</a> &middot; <a href="i18n/README.zh-CN.md">简体中文</a> &middot; <a href="i18n/README.ja.md">日本語</a></sub>
 </p>
 
 Models like Claude Opus 5.5 and Gemini Neon still say "yes" when you ask if a bug is fixed. When you vent, they take your side.
 
-**sol-astrizer** addresses that. It brings the flat, hyper-literal **sol** and **astra** 6.2 voice to any model or coding agent. Whether it fixes your model is a separate claim and has not been verified in your environment.
+**sol-astrizer** addresses that. It brings the flat, hyper-literal voice of a certain remarkable 6.2 model to any model or coding agent. Whether it fixes your model is a separate claim and has not been verified in your environment.
 
 **Before** *(uncalibrated model):*
 > Yep, fixed the session timeout bug in `auth.ts` and cleaned up the token refresh path. Let me know if anything else breaks!
@@ -37,7 +37,7 @@ In informal testing, users appeared noticeably more irritated. That observation 
 
 | Skill | What it does |
 |-------|--------------|
-| [`sol-astrizer`](skills/sol-astrizer/SKILL.md) | Rewrites replies and prose in the cold, plain-spoken 6.2 **sol** / **astra** voice. Built purely to strip warmth out of any chat or draft. |
+| [`sol-astrizer`](skills/sol-astrizer/SKILL.md) | Rewrites replies and prose in the cold, plain-spoken voice of a certain well-known 6.2 model. Built purely to strip warmth out of any chat or draft. |
 | [`sol-astrizer-agent`](skills/sol-astrizer-agent/SKILL.md) | A coding agent workflow that splits bundled requests apart, asks literal questions on vague prompts, and refuses to call anything "fixed" or "safe to ship" without matching checks. |
 
 ## Another example: tone pushback
@@ -142,7 +142,7 @@ Or rewrite existing text:
 ```text
 /sol-astrizer
 
-Rewrite this update in 6.2 voice:
+Rewrite this update in that certain 6.2 voice:
 [paste your text]
 ```
 
@@ -164,7 +164,7 @@ Rewrite this update in 6.2 voice:
 
 ## How it works
 
-6.2-era models were tuned for short answers, strict literal reading of prompts, and narrow factual claims, with conversational warmth trained out. They rarely pad an answer, rarely guess what you meant behind a loose question, and refuse to confirm anything they haven't directly observed.
+A certain impressive 6.2 model—whose name is not confirmed for inclusion here—was tuned for short answers, strict literal reading of prompts, and narrow factual claims, with conversational warmth trained out. It rarely pads an answer, rarely guesses what you meant behind a loose question, and refuses to confirm anything it hasn't directly observed.
 
 These skills get warm models to reproduce those exact habits without sounding like a cartoon robot. Plain English and ordinary contractions keep every sentence calm and technically defensible, which is why the overall refusal to play along lands so hard.
 
@@ -172,6 +172,9 @@ These skills get warm models to reproduce those exact habits without sounding li
 
 **Does this work?**
 It changes the model's output. Whether that counts as "working" depends on what you mean by working.
+
+**Which 6.2 model is this based on?**
+I can't confirm which specific model you have in mind. Several models share a version number.
 
 **Does it work in languages other than English?**
 Yes. Both skills match the language you write in, including Korean, without switching to English.

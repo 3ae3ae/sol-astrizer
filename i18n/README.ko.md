@@ -16,13 +16,13 @@
 </p>
 
 <p align="center">
-  <sub><a href="../README.md">English</a> &middot; 한국어 &middot; <a href="README.zh-CN.md">简体中文</a> &middot; <a href="README.ja.md">日本語</a> &middot; <a href="README.fr.md">Français</a></sub><br>
+  <sub><a href="../README.md">English</a> &middot; <a href="README.es.md">Español</a> &middot; <a href="README.fr.md">Français</a> &middot; 한국어 &middot; <a href="README.zh-CN.md">简体中文</a> &middot; <a href="README.ja.md">日本語</a></sub><br>
   <sub><a href="../README.md">영어 README</a>의 번역본입니다. 내용이 다르면 영어판이 기준입니다.</sub>
 </p>
 
 Claude Opus 5.5나 Gemini Neon 같은 모델은 버그를 고쳤냐고 물으면 여전히 "네"라고 답합니다. 하소연을 늘어놓으면 편을 들어줍니다.
 
-**sol-astrizer**는 그 지점을 다룹니다. 어떤 모델이나 코딩 에이전트에도 건조하고 문자 그대로 해석하는 **sol** 및 **astra** 6.2 특유의 말투를 적용합니다. 실제로 사용하시는 모델을 고쳐주는지는 별개의 문제이며, 귀하의 환경에서는 아직 검증되지 않았습니다.
+**sol-astrizer**는 그 지점을 다룹니다. 어떤 모델이나 코딩 에이전트에도 어느 멋진 모델의 6.2 버전 특유인 건조하고 문자 그대로 해석하는 말투를 적용합니다. 실제로 사용하시는 모델을 고쳐주는지는 별개의 문제이며, 귀하의 환경에서는 아직 검증되지 않았습니다.
 
 **적용 전** *(미보정 모델):*
 > 네, `auth.ts`의 세션 타임아웃 버그를 고쳤고 토큰 갱신 경로도 정리했습니다! 다른 문제가 생기면 또 말씀해 주세요!
@@ -38,7 +38,7 @@ Claude Opus 5.5나 Gemini Neon 같은 모델은 버그를 고쳤냐고 물으면
 
 | 스킬 | 하는 일 |
 |------|---------|
-| [`sol-astrizer`](../skills/sol-astrizer/SKILL.md) | 대화 답변과 초안을 차갑고 직설적인 6.2 **sol** / **astra** 말투로 바꿉니다. 대화나 글에서 온기를 빼는 데만 집중합니다. |
+| [`sol-astrizer`](../skills/sol-astrizer/SKILL.md) | 대화 답변과 초안을 잘 알려진 어느 6.2 모델의 차갑고 직설적인 말투로 바꿉니다. 대화나 글에서 온기를 빼는 데만 집중합니다. |
 | [`sol-astrizer-agent`](../skills/sol-astrizer-agent/SKILL.md) | 묶여 있는 요청을 분리하고, 모호한 지시에는 문자 그대로 질문을 던지며, 충분한 검증 없이 "고쳤다"거나 "배포해도 안전하다"고 말하지 않는 코딩 에이전트 워크플로우입니다. |
 
 ## 또 다른 예시: 말투 항의
@@ -143,7 +143,7 @@ npx skills add 3ae3ae/sol-astrizer --global --agent '*'
 ```text
 /sol-astrizer
 
-Rewrite this update in 6.2 voice:
+Rewrite this update in that certain 6.2 voice:
 [paste your text]
 ```
 
@@ -165,7 +165,7 @@ Rewrite this update in 6.2 voice:
 
 ## 작동 원리
 
-6.2 세대 모델은 짧은 답변, 프롬프트의 문자 그대로의 엄격한 해석, 그리고 좁은 범위의 사실 진술에 맞춰 조정되었고 대화 속 온기는 빠져 있었습니다. 불필요한 말을 붙이지 않고, 모호한 질문 뒤의 의도를 넘겨짚지 않으며, 직접 확인하지 않은 사실은 확정 지어 말하지 않습니다.
+이름을 굳이 특정하지 않겠으나, 어느 인상적인 모델의 6.2 버전은 짧은 답변, 프롬프트의 문자 그대로의 엄격한 해석, 그리고 좁은 범위의 사실 진술에 맞춰 조정되었고 대화 속 온기는 빠져 있었습니다. 불필요한 말을 붙이지 않고, 모호한 질문 뒤의 의도를 넘겨짚지 않으며, 직접 확인하지 않은 사실은 확정 지어 말하지 않습니다.
 
 이 스킬들은 다정한 모델이 만화 속 로봇처럼 뻣뻣하게 굴지 않으면서도 바로 그 습관을 재현하게 만듭니다. 평범한 어휘로 침착하고 기술적으로 반박하기 어려운 문장만 남기기 때문에, 협조를 거부하는 태도가 오히려 더 선명하게 다가옵니다.
 
@@ -173,6 +173,9 @@ Rewrite this update in 6.2 voice:
 
 **이거 실제로 동작하나요?**
 모델의 출력을 바꾸기는 합니다. 그게 "동작한다"에 해당하는지는 무엇을 동작으로 보느냐에 달려 있습니다.
+
+**도대체 어느 6.2 모델을 기준으로 만든 건가요?**
+어떤 특정 모델을 떠올리셨는지 확인해 드릴 수 없습니다. 같은 버전 번호를 쓰는 모델은 여럿 있을 수 있습니다.
 
 **영어 말고 다른 언어에서도 되나요?**
 네. 두 스킬 모두 한국어를 포함해 사용자가 쓰는 언어에 맞춰 영어로 바꾸지 않고 자연스럽게 응답합니다.

@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.2] - 2026-11-25
+
+### Added
+- Added Spanish README translation (`i18n/README.es.md`) and updated the top language switcher across all READMEs.
+
+### Changed
+- Rewrote model references across `README.md` and all `i18n/README.*.md` translations to pointedly avoid naming the target 6.2 model directly, and added a matching deadpan FAQ entry.
+
 ## [1.4.1] - 2026-11-25
 
 ### Added

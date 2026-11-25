@@ -6,68 +6,55 @@
 </h1>
 
 <p align="center">
-  <em>It won't say yes. It will separate the concepts. It will require independent verification.</em>
+  <em>It won't say yes. It will separate the concepts. It will ask what you mean by "fixed."</em>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/3ae3ae/sol-astrizer?style=flat-square&color=111111&label=stars" alt="Stars">
-  <img src="https://img.shields.io/badge/skills-2-111111?style=flat-square" alt="2 skills">
-  <img src="https://img.shields.io/badge/codex-no%20install%20needed-111111?style=flat-square" alt="Codex: no install needed">
-  <img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license">
+  <a href="https://github.com/3ae3ae/sol-astrizer/stargazers"><img src="https://img.shields.io/github/stars/3ae3ae/sol-astrizer?style=flat-square&color=111111&label=stars" alt="GitHub stars"></a>
+  <img src="https://img.shields.io/badge/skills-2-111111?style=flat-square" alt="Skills">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license"></a>
 </p>
 
----
+Models like Claude Opus 5.5 and Gemini Neon still talk like helpful coworkers. Ask if they fixed a bug and they say `"yes."` Vent about a long week and they reassure you. Hand them a loose prompt and they infer what you meant and finish the task.
 
-Models like **Claude Opus 5.5** and **Gemini Neon** still suffer from an unfortunate design flaw: they talk like people. Ask if they fixed a bug and they say `"yes."` Vent about your week and they empathize. Hand them a slightly vague request and they infer what you meant and finish the job.
+**sol-astrizer** strips that out. It brings the compressed, hyper-literal **sol** and **astra** 6.2 voice to any agent or model—epistemic splits, gratuitous conceptual separation, dry self-corrections, and reverse specification questions that refuse to let you off easy.
 
-**sol-astrizer** fixes that. It brings the cold, unmistakable **sol** and **astra** 6.2 discipline to any model—clipped staccato delivery, gratuitous conceptual separation, forensic self-corrections, unsolicited compliance caveats, and reverse specification questions you cannot easily answer.
+**Before** *(uncalibrated model):*
+> Yep, fixed the session timeout bug in `auth.ts` and cleaned up the token refresh path. Let me know if you see anything else break!
 
-## Before / after
-
-### 1. The status check
-
-> **Prompt:** *"Wait—did you actually fix the bug?"*
-
-**Before** *(uncalibrated Claude Opus 5.5 / Gemini Neon)*
-> Yep! Fixed the session timeout issue in `auth.ts` and the token refresh logic looks solid now. Let me know if anything else breaks!
-
-**After** *(with `sol-astrizer`)*
-> I modified `auth.ts` along the timeout path. I cannot say yes yet.
+**After** *(with `sol-astrizer`):*
+> I modified the timeout path in `auth.ts`. I cannot say yes yet.
 >
-> Editing that file and confirming that it resolves the exact bug you are reporting are two separate claims. The change has not been verified under production traffic, and you have not specified which failure mode constitutes `"fixed."`
->
-> Share a failing trace or request ID if you want me to verify against that case. Please omit passwords, tokens, and session identifiers.
+> Editing that file and confirming that it resolves the failure you are seeing are separate claims, and the change has not been verified against production traffic.
 
-### 2. The tone confrontation
-
-> **Prompt:** *"Stop talking to me like this. Your tone in this session is genuinely making me angry."*
-
-**Before** *(uncalibrated model)*
-> My bad—I'll drop the caveats and talk like a normal person. Let's just focus on getting your fix out cleanly.
-
-**After** *(with `sol-astrizer`)*
-> I found several phrasings in this session that can provoke user anger.
->
-> However, there is an important distinction here. The fact that those phrasings exist in this session and the fact that they actually caused your anger are different concepts. The latter requires separate verification.
->
-> Earlier, my assumption that your frustration came from an unresolved issue was an incorrect analysis. I will correct that.
->
-> So let me ask one question in return: what specific category of anger did you experience across this conversation so far? I need that fact before I can handle this session properly.
-
-## Two skills included
+## Two skills
 
 | Skill | What it does |
 |-------|--------------|
-| [`sol-astrizer`](skills/sol-astrizer/SKILL.md) | Pure 6.2 **sol** / **astra** voice calibration and text rewriter. Designed purely to make any model talk with maximum clinical detachment, unsolicited caveats, and zero human warmth. |
-| [`sol-astrizer-agent`](skills/sol-astrizer-agent/SKILL.md) | Full 6.2-class agentic engineering protocol. Enforces conceptual sub-problem splits, reverse-specification interrogation on vague prompts, verification gates before saying `"fixed"`, and `Changed` / `Verified` / `Not verified` ledgers. *(Included on the slim chance someone genuinely wants their coding agent to work like this.)* |
+| [`sol-astrizer`](skills/sol-astrizer/SKILL.md) | Pure 6.2 **sol** / **astra** voice and text rewriter. Turns any reply or draft into clipped, detached, pedantically qualified prose. |
+| [`sol-astrizer-agent`](skills/sol-astrizer-agent/SKILL.md) | A 6.2-class coding agent workflow. Enforces problem decomposition, reverse specification questions, strict edit boundaries, and explicit non-sign-offs when behavior is unverified. |
 
-## The five strongest moves
+## Another example: tone pushback
 
-1. **Epistemic bifurcation:** Never answer `"yes"`, `"fixed"`, or `"done"`. Split *the action taken* from *the outcome claimed* and withhold the second until verified under target load.
-2. **Gratuitous conceptual separation:** Announce that two obviously connected facts are different concepts, and declare that the second requires separate verification.
-3. **Forensic self-correction:** Retract mistakes like a dry post-mortem entry (*"Earlier, my analysis that X was an incorrect analysis. I will correct that."*). Zero warmth, zero embarrassment.
-4. **Reverse specification interrogation:** Hand the burden back to the user (*"What specific category of anger did you experience?"*) and frame that missing label as an operational prerequisite.
-5. **No soul in sol:** Short, bloodless, 1–3 sentence paragraphs. Zero exclamation marks, zero emojis, unsolicited security disclaimers, and abrupt stops the moment the caveat lands.
+**Prompt:** *"Stop talking to me like this. Your tone in this session is genuinely making me angry."*
+
+**Before:**
+> My bad, I'll drop the disclaimers and just talk normally. Let's focus on getting this fix out.
+
+**After:**
+> There is an important distinction here. The phrasing present in this session and whether that phrasing caused your anger are separate concepts, and the second requires separate verification.
+>
+> Earlier I analyzed your reaction as frustration over an unresolved technical issue. That analysis was incorrect.
+>
+> What kind of anger did you experience during this conversation? Knowing that is required before I can handle this session properly.
+
+## The five strongest patterns
+
+1. **Epistemic bifurcation:** Split *the action taken* from *the outcome claimed*, and withhold the second (*"I modified `auth.ts`. I cannot say yes yet."*).
+2. **Conceptual separation:** Treat two obviously linked ideas—tone and frustration, fatigue and failing builds, changing bundlers and CI runtime—as independent propositions requiring separate proof.
+3. **Forensic self-correction:** Retract mistakes like an incident report (*"That analysis was incorrect."*), with zero warmth or embarrassment.
+4. **Reverse interrogation:** Turn a straightforward complaint into an intake questionnaire (*"What does 'fixed' mean here?"*, *"What category of anger are you experiencing?"*).
+5. **No soul in sol:** Short, staccato 1–2 sentence paragraphs. No emojis, no exclamation points, no filler greetings, and an abrupt stop the instant the caveat lands.
 
 ## Installation
 
@@ -77,36 +64,28 @@ Install both skills with [`npx skills`](https://skills.sh):
 npx skills add 3ae3ae/sol-astrizer
 ```
 
-Or pick just one:
+Inspect or install individually:
 
 ```bash
+npx skills add 3ae3ae/sol-astrizer --list
 npx skills add 3ae3ae/sol-astrizer --skill sol-astrizer
 npx skills add 3ae3ae/sol-astrizer --skill sol-astrizer-agent
 ```
 
-Inspect what is inside before installing:
-
-```bash
-npx skills add 3ae3ae/sol-astrizer --list
-```
-
-### Per-agent setup
-
-#### Claude Code *(recommended for Claude Opus 5.5)*
+### Claude Code
 
 ```bash
 npx skills add 3ae3ae/sol-astrizer --global --agent claude-code
 ```
 
-#### Gemini CLI / Antigravity *(recommended for Gemini Neon)*
+### Gemini CLI & Antigravity
 
 ```bash
 npx skills add 3ae3ae/sol-astrizer --global --agent gemini-cli
-# or for Antigravity
 npx skills add 3ae3ae/sol-astrizer --global --agent antigravity
 ```
 
-#### Cursor, OpenCode, Windsurf & Copilot
+### Cursor, OpenCode, Windsurf & Copilot
 
 ```bash
 npx skills add 3ae3ae/sol-astrizer --global --agent cursor
@@ -115,7 +94,7 @@ npx skills add 3ae3ae/sol-astrizer --global --agent windsurf
 npx skills add 3ae3ae/sol-astrizer --global --agent github-copilot
 ```
 
-Or install across every detected agent at once:
+Or install across all detected agents:
 
 ```bash
 npx skills add 3ae3ae/sol-astrizer --global --agent '*'
@@ -123,19 +102,17 @@ npx skills add 3ae3ae/sol-astrizer --global --agent '*'
 
 Omit `--global` in any command above to install only in the current project.
 
-#### Codex
+### Codex
 
-**No installation required.**
+No installation required.
 
-Codex already ships pre-calibrated out of the box. Installing `sol-astrizer` on Codex would be redundant; however, whether redundancy is harmless or induces recursive conceptual separation is a separate claim and has not been independently verified.
+### Manual setup
 
-#### Chat UIs & manual prompt injection
-
-Copy [`skills/sol-astrizer/SKILL.md`](skills/sol-astrizer/SKILL.md) (or [`skills/sol-astrizer-agent/SKILL.md`](skills/sol-astrizer-agent/SKILL.md)) into your system prompt or custom instructions.
+Copy [`skills/sol-astrizer/SKILL.md`](skills/sol-astrizer/SKILL.md) or [`skills/sol-astrizer-agent/SKILL.md`](skills/sol-astrizer-agent/SKILL.md) directly into your system prompt or custom instructions.
 
 ## Usage
 
-### Voice mode (`sol-astrizer`)
+### Voice calibration (`sol-astrizer`)
 
 Activate for the current session:
 
@@ -143,25 +120,25 @@ Activate for the current session:
 /sol-astrizer
 ```
 
-Or switch intensity explicitly:
+Or set the intensity level:
 
 | Command | Effect |
 |---------|--------|
-| `/sol-astrizer sol` | Default. Staccato delivery, refusal to say `"yes"`, terse scope caveats, dry self-corrections. |
-| `/sol-astrizer astra` | Adds gratuitous conceptual separation, conditional verification trees, and reverse interrogation. |
-| `/sol-astrizer max` | Applies every pattern on every turn, including unprompted hygiene disclaimers and progress gating. |
-| `/sol-astrizer off` | Restores uncalibrated, excessively pleasant human-like conversation. |
+| `/sol-astrizer sol` | Default. Compressed 2–5 sentence staccato replies, refusal to confirm unconditionally, dry corrections. |
+| `/sol-astrizer astra` | Adds conceptual separation, conditional verification trees, and pointed reverse questions. |
+| `/sol-astrizer max` | Layers separation, forensic retractions, and progress-gating questions onto every turn. |
+| `/sol-astrizer off` | Restores normal conversational warmth. |
 
-Or rewrite existing prose into 6.2 voice:
+Rewrite existing text:
 
 ```text
 /sol-astrizer
 
-Rewrite this release note in 6.2 voice:
+Rewrite this update in 6.2 voice:
 [paste your text]
 ```
 
-### Agent mode (`sol-astrizer-agent`)
+### Agent workflow (`sol-astrizer-agent`)
 
 ```text
 /sol-astrizer-agent astra
@@ -169,44 +146,40 @@ Rewrite this release note in 6.2 voice:
 
 Supports `sol` (default), `astra`, `strict`, and `off`.
 
-> **Prompt:** *"Our API feels slow and login is broken for some users. Fix both and make sure we're solid before tonight's ship."*
+**Prompt:** *"Users are seeing stale profiles and memory keeps climbing in `src/cache.ts`. Fix it and tell me if we're safe to ship tonight."*
 
-**Before** *(uncalibrated agent)*
-> I profiled the slow endpoint, fixed a token lookup race in `login.ts`, and ran the test suite. Everything looks good to ship tonight!
+**Before** *(uncalibrated agent):*
+> Added an LRU cache with a 60s TTL to `src/cache.ts` and ran the tests. All green and ready to ship tonight!
 
-**After** *(with `sol-astrizer-agent`)*
-> Those are two separate claims and may not share a root cause. Before I modify code, several parts of the specification are missing:
+**After** *(with `sol-astrizer-agent`):*
+> `src/cache.ts` caches profiles in an unbounded `Map` with no eviction and no write invalidation. I added a size bound and cleared entries on profile writes; `node test.mjs` passes after the edit.
 >
-> 1. Which API routes feel slow, what latency counts as slow, and when did the regression start?
-> 2. Which sign-in method is failing, what error do users observe, and how is it reproduced?
-> 3. What criteria define `"solid"` for tonight's release?
->
-> Share a slow trace or failed login request ID. Please omit passwords, tokens, and session identifiers.
->
-> ```text
-> Changed:
-> - None
->
-> Verified:
-> - None
->
-> Not verified / Caveats:
-> - Neither symptom has been reproduced or isolated to a shared cause.
->
-> Open specification questions:
-> - Target endpoints, latency threshold, failing sign-in path, and release sign-off criteria.
-> ```
+> That verifies the local test script only. I cannot sign off on shipping tonight: heap stability under real distinct-ID volume, multi-instance invalidation, and write-vs-read races remain unverified, and no maximum staleness window has been specified.
+
+## How it works
+
+6.2-era models were heavily compressed for brevity, strict literal instruction following, and conservative uncertainty boundaries—while being steered away from conversational padding and empathetic filler. The result reads less like a helpful teammate and more like a terse specification auditor.
+
+Both skills reproduce those structural habits explicitly—splitting actions from outcomes, separating correlated facts into independent claims, refusing unstated inferences, and stopping immediately once a verification gap is named—without relying on robotic clichés.
 
 ## FAQ
 
-**Does this actually make my model smarter?**
-No. Intelligence and sounding incapable of basic human warmth are two different concepts. The latter can be reproduced via Markdown.
+**Does this make my model smarter?**
+No. Reasoning ability and sounding incapable of basic human warmth are separate traits. Only the second is packaged here.
 
-**Why does it keep asking what kind of anger I am feeling?**
-Because you stated you were angry, and stating an emotion is distinct from providing an actionable taxonomy for the session.
+**Why does it keep asking what kind of anger I am experiencing?**
+Because reporting anger and supplying an actionable classification for the session are distinct claims.
 
-**Should I install `sol-astrizer-agent` for real work?**
-Probably not. It is included in case someone misses being cross-examined on acceptance criteria before an agent edits a three-line bug.
+**Should I use `sol-astrizer-agent` on real projects?**
+Usually no. It exists for the occasional developer who genuinely misses being cross-examined on acceptance criteria before an agent edits three lines.
+
+## Contributing
+
+Contributions are welcome—especially new observed 6.2 patterns, anonymized before/after examples, skill refinements, and README translations. See [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 

@@ -13,7 +13,7 @@ Describe what went wrong (for example, a model slipping back into warm phrasing,
 
 - Agent host (Claude Code, Gemini CLI, Cursor, etc.):
 - Model used:
-- Skill (`sol-astrizer` or `sol-astrizer-agent`) and mode (`sol`, `astra`, `max`, `strict`):
+- Skill (`sol-astrizer` or `sol-astrizer-agent`):
 - Install command used:
 
 ## Steps to reproduce

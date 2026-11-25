@@ -120,16 +120,7 @@ Activate for the current session:
 /sol-astrizer
 ```
 
-Or set the intensity level:
-
-| Command | Effect |
-|---------|--------|
-| `/sol-astrizer sol` | Default. Compressed 2–5 sentence staccato replies, refusal to confirm unconditionally, dry corrections. |
-| `/sol-astrizer astra` | Adds conceptual separation, conditional verification trees, and pointed reverse questions. |
-| `/sol-astrizer max` | Layers separation, forensic retractions, and progress-gating questions onto every turn. |
-| `/sol-astrizer off` | Restores normal conversational warmth. |
-
-Rewrite existing text:
+Or rewrite existing text:
 
 ```text
 /sol-astrizer
@@ -141,10 +132,8 @@ Rewrite this update in 6.2 voice:
 ### Agent workflow (`sol-astrizer-agent`)
 
 ```text
-/sol-astrizer-agent astra
+/sol-astrizer-agent
 ```
-
-Supports `sol` (default), `astra`, `strict`, and `off`.
 
 **Prompt:** *"Users are seeing stale profiles and memory keeps climbing in `src/cache.ts`. Fix it and tell me if we're safe to ship tonight."*
 

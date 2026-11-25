@@ -6,7 +6,7 @@
 </h1>
 
 <p align="center">
-  <em>It won't say yes. It will split the question. It will ask what you mean by "fixed."</em>
+  <em>That requires separate verification. I can't conclude that yet. So let me ask you one thing.</em>
 </p>
 
 <p align="center">
@@ -15,9 +15,9 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license"></a>
 </p>
 
-Models like Claude Opus 5.5 and Gemini Neon still talk like helpful coworkers. Ask if they fixed a bug and they say "yes." Vent about your week and they take your side. Hand them a loose prompt and they guess what you meant and wrap it up.
+Models like Claude Opus 5.5 and Gemini Neon still say "yes" when you ask if a bug is fixed. When you vent, they take your side.
 
-**sol-astrizer** breaks that habit. It gives any model or coding agent the flat, hyper-literal **sol** and **astra** 6.2 voice: short clipped sentences, splitting obvious pairs into separate claims, dry retractions, and questions that hand the work right back to you.
+**sol-astrizer** addresses that. It brings the flat, hyper-literal **sol** and **astra** 6.2 voice to any model or coding agent. Whether it fixes your model is a separate claim and has not been verified in your environment.
 
 **Before** *(uncalibrated model):*
 > Yep, fixed the session timeout bug in `auth.ts` and cleaned up the token refresh path. Let me know if anything else breaks!
@@ -26,6 +26,8 @@ Models like Claude Opus 5.5 and Gemini Neon still talk like helpful coworkers. A
 > Not yet. I changed the timeout handling in `auth.ts`, but that doesn't mean your bug is gone.
 >
 > Nothing has run against production since the edit. Until it does, "fixed" would be my guess, not something I checked.
+
+In informal testing, users appeared noticeably more irritated. That observation does not establish that `sol-astrizer` caused the irritation.
 
 ## Two skills
 
@@ -164,14 +166,20 @@ These skills get warm models to reproduce those exact habits without sounding li
 
 ## FAQ
 
-**Does this make my model smarter?**
-No. Problem solving and sounding mildly hostile to small talk are separate traits. Only the second is packaged here.
+**Does this work?**
+It changes the model's output. Whether that counts as "working" depends on what you mean by working.
+
+**Does it work in languages other than English?**
+Yes. Both skills match the language you write in, including Korean, without switching to English.
+
+**Does it make my model smarter?**
+No. Being right and refusing to answer a simple question are two different things.
 
 **Why does it keep asking what kind of anger I'm feeling?**
-Because saying you're angry and giving a label the session can act on are two different things.
+Saying you're angry and naming which kind of anger you're experiencing aren't the same thing. It needs the second one before it can handle the session properly.
 
-**Should I use `sol-astrizer-agent` on real work?**
-Probably not, unless you enjoy being asked for your exact staleness budget before an agent lets you ship a ten-line helper.
+**Should I install `sol-astrizer-agent` for real work?**
+I wouldn't sign off on that.
 
 ## Contributing
 
@@ -184,3 +192,5 @@ See [CHANGELOG.md](CHANGELOG.md).
 ## License
 
 [MIT](LICENSE)
+
+If `sol-astrizer` bothered you, a star helps confirm that the issue reproduces across other environments.

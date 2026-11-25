@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2026-11-25
+
+### Changed
+- Added native language-matching guidance to both `sol-astrizer` and `sol-astrizer-agent` so non-English users (including Korean) receive natural, flat polite 6.2 phrasing rather than English replies or stiff translationese.
+- Sharpened `README.md` slogan, lead, informal testing line, FAQ, and closing footer with deadpan 6.2 micro-copy.
+
 ## [1.3.0] - 2026-11-25
 
 ### Changed

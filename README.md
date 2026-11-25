@@ -1,11 +1,9 @@
-<p align="center">
+<h1 align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
-    <img src="assets/logo-light.svg" width="88" alt="sol-astrizer">
+    <img src="assets/logo-light.svg" width="360" alt="sol-astrizer">
   </picture>
-</p>
-
-<h1 align="center">sol-astrizer</h1>
+</h1>
 
 <p align="center">
   <em>It won't say yes. It will separate the concepts. It will require independent verification.</em>

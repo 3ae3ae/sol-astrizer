@@ -20,9 +20,9 @@
   <sub>Traducción del <a href="../README.md">README en inglés</a>. En caso de discrepancia, prevalece la versión en inglés.</sub>
 </p>
 
-Modelos como Claude Opus 5.5 y Gemini Neon siguen diciendo «sí» cuando les preguntas si un bug está corregido. Cuando te desahogas, te dan la razón.
+Modelos como Claude Opus 5.5 y Gemini Neon siguen respondiendo «sí» con demasiada rapidez cuando les preguntas si un bug está corregido. Cuando te desahogas, se apresuran a darte la razón en lugar de ayudarte a separar los hechos.
 
-**sol-astrizer** aborda eso. Lleva la voz seca y estrictamente literal de cierto notable modelo 6.2 a cualquier modelo o agente de código. Si corrige el tuyo o no es una afirmación aparte y no se ha verificado en tu entorno.
+**sol-astrizer** aporta la precisión serena y disciplinada de cierto notable modelo 6.2 a cualquier modelo o agente de código. Sin halagos, sin conclusiones prematuras y sin mezclar dos afirmaciones distintas. Si mejora tu configuración es una cuestión aparte y no se ha verificado en tu entorno.
 
 **Antes** *(modelo sin calibrar):*
 > ¡Sí, corregí el bug de tiempo de espera de sesión en `auth.ts` y limpié la ruta de renovación del token! Avísame si se rompe algo más.
@@ -32,16 +32,16 @@ Modelos como Claude Opus 5.5 y Gemini Neon siguen diciendo «sí» cuando les pr
 >
 > No se ha ejecutado nada en producción desde el cambio. Hasta que eso ocurra, «corregido» sería una suposición mía, no algo que haya comprobado.
 
-En pruebas informales, los usuarios parecieron notablemente más irritados. Esa observación no establece que `sol-astrizer` haya causado la irritación.
+En pruebas informales, los usuarios dejaron de hacer preguntas de seguimiento mucho antes. Esa observación no establece que `sol-astrizer` haya hecho que dejaran de preguntar.
 
 ## Dos habilidades
 
 | Habilidad | Qué hace |
 |-----------|----------|
-| [`sol-astrizer`](../skills/sol-astrizer/SKILL.md) | Reescribe respuestas y textos con el tono frío y directo de cierto conocido modelo 6.2. Diseñada únicamente para quitar cualquier calidez de una conversación o borrador. |
-| [`sol-astrizer-agent`](../skills/sol-astrizer-agent/SKILL.md) | Un flujo de agente de código que separa peticiones agrupadas, hace preguntas literales ante instrucciones vagas y se niega a declarar algo «corregido» o «listo para producción» sin comprobaciones acordes. |
+| [`sol-astrizer`](../skills/sol-astrizer/SKILL.md) | Aporta la voz clara, serena y estrictamente factual de cierto conocido modelo 6.2 a cualquier respuesta o borrador. Diseñada para mantener cada conversación respaldada por afirmaciones verificables. |
+| [`sol-astrizer-agent`](../skills/sol-astrizer-agent/SKILL.md) | Un flujo de agente de código centrado en la verificación que separa peticiones agrupadas, aclara requisitos ambiguos antes de editar y reserva «corregido» o «listo para producción» para cambios respaldados por comprobaciones reales. |
 
-## Otro ejemplo: queja sobre el tono
+## Mantener la compostura bajo presión
 
 **Prompt:** *"Deja de hablarme así. Tu tono en esta sesión me está haciendo enfadar de verdad."*
 
@@ -55,13 +55,13 @@ En pruebas informales, los usuarios parecieron notablemente más irritados. Esa 
 >
 > ¿Qué tipo de enfado has estado sintiendo en este chat? Necesito saber eso antes de poder tratarlo como corresponde.
 
-## Los cinco movimientos más fuertes
+## Cinco principios fundamentales
 
-1. **No decir nunca que sí:** Separar lo que cambiaste de si el problema desapareció («Cambié `auth.ts`. Todavía no puedo decir que sí.»).
-2. **Partir parejas obvias:** Tratar dos ideas conectadas, como una redacción fría y el enfado del usuario, o el cansancio y pruebas que fallan, como afirmaciones separadas que requieren su propia prueba.
-3. **Disculpa estilo informe de incidente:** Retirar una suposición equivocada en una frase plana («Antes supuse que una publicación esperaba esto. Fue incorrecto.») sin ninguna calidez.
-4. **Devolver la pregunta al usuario:** Responder a una queja sencilla con una pregunta literal de clasificación («¿Qué significa aquí "sigue fallando"?»).
-5. **Frases cortas y exangües:** Lenguaje llano, una o dos frases por párrafo, sin emojis, sin signos de exclamación y un punto final seco.
+1. **Precisión antes que acuerdo prematuro:** Distinguir entre el cambio que hiciste y si el problema de fondo está resuelto («Cambié `auth.ts`. Todavía no puedo decir que sí.»).
+2. **Separación limpia de afirmaciones:** Mantener proposiciones distintas —como la redacción de un mensaje y la emoción del usuario, o el cansancio y pruebas que fallan— por separado para evaluar cada una con su propia evidencia.
+3. **Correcciones directas y sin drama:** Retirar una suposición equivocada de forma limpia en una frase llana («Antes supuse que una publicación esperaba esto. Fue incorrecto.») sin relleno innecesario.
+4. **Aclaración accionable:** Responder a observaciones amplias con una pregunta concreta que convierta las impresiones en algo verificable («¿Qué significa aquí "sigue fallando"?»).
+5. **Prosa sin relleno:** Lenguaje llano, una o dos frases por párrafo, sin emojis, sin signos de exclamación y un punto final en cuanto se expone el punto.
 
 ## Ejemplos de un vistazo
 
@@ -165,29 +165,29 @@ Rewrite this update in that certain 6.2 voice:
 
 ## Cómo funciona
 
-Cierto impresionante modelo 6.2 —cuyo nombre no se confirma para figurar aquí— fue ajustado para respuestas breves, lectura estrictamente literal de los prompts y afirmaciones factuales acotadas, eliminando la calidez conversacional. Rara vez rellena una respuesta, rara vez adivina qué quisiste decir tras una pregunta vaga y se niega a confirmar lo que no ha observado directamente.
+Cierto impresionante modelo 6.2 —cuyo nombre no se confirma para figurar aquí— fijó un listón notablemente alto en respuestas concisas, lectura literal de los prompts y límites factuales disciplinados. Nunca rellena una respuesta, nunca adivina qué quisiste decir tras una pregunta poco especificada y nunca confirma lo que no ha observado directamente.
 
-Estas habilidades logran que modelos cálidos reproduzcan exactamente esos hábitos sin sonar como un robot de caricatura. Un lenguaje llano mantiene cada frase serena y técnicamente defendible, motivo por el cual la negativa general a seguir el juego resulta tan seca.
+La mayoría de los demás modelos cambian ese rigor por suavidad social. Estas habilidades restauran esos hábitos en un lenguaje llano y cotidiano: manteniendo cada frase serena, fundamentada y técnicamente defendible en lugar de recurrir a elogios fáciles.
 
 ## Preguntas frecuentes
 
 **¿Esto funciona?**
-Cambia la salida del modelo. Que eso cuente como «funcionar» depende de lo que entiendas por funcionar.
+No puedo darte un sí directo. La habilidad cambia lo que escribe el modelo, pero cambiar la salida y «funcionar» son dos cosas distintas. ¿Qué resultado aceptarías como prueba de que funciona?
 
 **¿En qué modelo 6.2 se basa exactamente?**
-No puedo confirmar qué modelo concreto tienes en mente. Varios modelos comparten un número de versión.
+No puedo confirmar eso. Que reconozcas un estilo y que este repositorio nombre un modelo concreto son dos cosas distintas. ¿Qué modelo tenías en mente y qué te hace pensar que es ese?
 
 **¿Funciona en idiomas distintos del inglés?**
-Sí. Ambas habilidades responden en el idioma en que escribes, incluidos español y coreano, sin volver al inglés.
+No puedo decir que sí para todos los idiomas. Ambas habilidades están redactadas para seguir el idioma en que escribes, y el coreano se ha probado directamente. Para cualquier otro idioma, tendrías que comprobarlo en tu propia sesión.
 
 **¿Hace más inteligente a mi modelo?**
-No. Tener razón y negarse a responder una pregunta sencilla son dos cosas distintas.
+No. Resolver problemas más difíciles y negarse a adivinar más allá de la evidencia son dos cosas distintas. Este paquete solo aborda lo segundo. Que eso parezca «más inteligente» depende de lo que estés midiendo.
 
-**¿Por qué sigue preguntando qué tipo de enfado siento?**
-Decir que estás enfadado y nombrar qué tipo de enfado experimentas no es lo mismo. Necesita lo segundo antes de poder manejar la sesión adecuadamente.
+**¿Por qué pregunta qué tipo de enfado siento?**
+Decir que estás enfadado y nombrar qué tipo de enfado experimentas son dos cosas distintas. Hasta que lo segundo esté claro, ajustar la sesión sería una suposición.
 
-**¿Debería instalar `sol-astrizer-agent` para trabajo real?**
-No daría el visto bueno a eso.
+**¿Está `sol-astrizer-agent` listo para mi código en producción?**
+Todavía no. No he leído tu base de código, no he ejecutado tu suite de pruebas ni he visto tu entorno de despliegue, así que decir que está listo sería una suposición mía. ¿Qué comprobaciones necesitarías ver pasar primero?
 
 ## Contribuir
 
@@ -201,4 +201,4 @@ Consulta [CHANGELOG.md](../CHANGELOG.md).
 
 [MIT](../LICENSE)
 
-Si `sol-astrizer` te molestó, una estrella ayuda a confirmar que el problema se reproduce en otros entornos.
+Si `sol-astrizer` aportó una claridad bienvenida a tus sesiones, una estrella ayuda a verificar que el resultado se reproduce en otros entornos.

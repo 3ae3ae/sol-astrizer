@@ -20,9 +20,9 @@
   <sub>Traduction du <a href="../README.md">README anglais</a>. En cas de divergence, la version anglaise fait foi.</sub>
 </p>
 
-Les modèles comme Claude Opus 5.5 et Gemini Neon répondent encore « oui » quand on leur demande si un bug est corrigé. Quand vous vous plaignez, ils prennent votre parti.
+Les modèles comme Claude Opus 5.5 et Gemini Neon répondent encore « oui » bien trop vite quand on leur demande si un bug est corrigé. Quand vous vous plaignez, ils s'empressent de vous donner raison au lieu de vous aider à séparer les faits.
 
-**sol-astrizer** traite cela. Il donne à n'importe quel modèle ou agent de code la voix sèche et strictement littérale d'une certaine remarquable version 6.2. Savoir s'il corrige votre modèle est une autre affirmation, et cela n'a pas été vérifié dans votre environnement.
+**sol-astrizer** apporte la précision calme et disciplinée d'un certain modèle 6.2 remarquable à n'importe quel modèle ou agent de code. Pas de flatterie, pas de conclusions hâtives et aucune confusion entre deux affirmations distinctes. Savoir s'il améliore votre configuration est une autre question et n'a pas été vérifié dans votre environnement.
 
 **Avant** *(modèle non calibré) :*
 > Oui, j'ai corrigé le bug d'expiration de session dans `auth.ts` et nettoyé le rafraîchissement de jeton ! Dites-moi si autre chose casse !
@@ -32,16 +32,16 @@ Les modèles comme Claude Opus 5.5 et Gemini Neon répondent encore « oui » qu
 >
 > Rien n'a été exécuté en production depuis cette modification. Tant que ce n'est pas le cas, « corrigé » serait une supposition, pas quelque chose que j'ai vérifié.
 
-Lors de tests informels, les utilisateurs semblaient nettement plus irrités. Cette observation n'établit pas que `sol-astrizer` est la cause de cette irritation.
+Lors de tests informels, les utilisateurs ont cessé beaucoup plus tôt de poser des questions complémentaires. Cette observation n'établit pas que `sol-astrizer` les ait amenés à s'arrêter.
 
 ## Deux compétences
 
 | Compétence | Rôle |
 |------------|------|
-| [`sol-astrizer`](../skills/sol-astrizer/SKILL.md) | Réécrit les réponses et les textes dans le ton froid et direct d'un certain modèle 6.2 bien connu. Conçue uniquement pour retirer toute chaleur d'un échange ou d'un brouillon. |
-| [`sol-astrizer-agent`](../skills/sol-astrizer-agent/SKILL.md) | Un workflow d'agent de code qui sépare les demandes groupées, pose des questions littérales sur les consignes vagues et refuse de déclarer quoi que ce soit « corrigé » ou « prêt pour la prod » sans vérifications correspondantes. |
+| [`sol-astrizer`](../skills/sol-astrizer/SKILL.md) | Apporte la voix claire, posée et strictement factuelle d'un certain modèle 6.2 bien connu à n'importe quelle réponse ou brouillon. Conçue pour ancrer chaque échange dans des énoncés vérifiables. |
+| [`sol-astrizer-agent`](../skills/sol-astrizer-agent/SKILL.md) | Un workflow d'agent de code axé sur la vérification qui démêle les demandes groupées, clarifie les exigences ambiguës avant de modifier le code et réserve « corrigé » ou « prêt pour la prod » aux changements appuyés par de vraies vérifications. |
 
-## Autre exemple : remarque sur le ton
+## Rester posé sous la pression
 
 **Prompt :** *"Arrête de me parler comme ça. Ton ton dans cette session me met vraiment en colère."*
 
@@ -55,13 +55,13 @@ Lors de tests informels, les utilisateurs semblaient nettement plus irrités. Ce
 >
 > Quel type de colère ressentez-vous dans cette conversation ? J'ai besoin de le savoir avant de pouvoir traiter ce point correctement.
 
-## Les cinq réflexes les plus marquants
+## Cinq principes fondamentaux
 
-1. **Ne jamais dire oui :** Séparer ce que vous avez modifié du fait que le problème soit résolu (« J'ai modifié `auth.ts`. Je ne peux pas encore dire oui. »).
-2. **Scinder les paires évidentes :** Traiter deux idées liées — comme un ton froid et la colère de l'utilisateur, ou la fatigue et des tests en échec — comme deux affirmations distinctes demandant chacune une preuve.
-3. **L'excuse façon rapport d'incident :** Retirer une mauvaise supposition en une phrase sèche (« Plus tôt, j'ai supposé qu'une mise en production attendait ce point. C'était faux. ») sans aucune chaleur.
-4. **Renvoyer la question à l'utilisateur :** Répondre à une plainte simple par une demande de clarification littérale (« Que veut dire "continue d'échouer" ici ? »).
-5. **Des phrases courtes et exsangues :** Formulations simples, une à deux phrases par paragraphe, aucun emoji, aucun point d'exclamation, et un arrêt net en fin de phrase.
+1. **La précision avant l'accord prématuré :** Distinguer la modification apportée du fait que le problème de fond soit résolu (« J'ai modifié `auth.ts`. Je ne peux pas encore dire oui. »).
+2. **Séparation nette des affirmations :** Traiter séparément deux propositions distinctes — comme la formulation d'un message et l'émotion de l'utilisateur, ou la fatigue et des tests en échec — afin d'évaluer chacune selon ses propres preuves.
+3. **Corrections directes et sans mise en scène :** Retirer proprement une mauvaise supposition en une phrase simple (« Plus tôt, j'ai supposé qu'une mise en production attendait ce point. C'était faux. ») sans remplissage inutile.
+4. **Clarification exploitable :** Répondre aux retours généraux par une question précise qui transforme une impression en point concret (« Que veut dire "continue d'échouer" ici ? »).
+5. **Prose sans remplissage :** Langage simple, une à deux phrases par paragraphe, aucun emoji, aucun point d'exclamation et un arrêt net une fois le point posé.
 
 ## Aperçu des exemples
 
@@ -165,29 +165,29 @@ Rewrite this update in that certain 6.2 voice:
 
 ## Fonctionnement
 
-Un certain modèle 6.2 impressionnant — dont le nom n'est pas confirmé pour figurer ici — a été réglé pour des réponses courtes, une lecture littérale stricte des prompts et des affirmations factuelles étroites, en supprimant la chaleur conversationnelle. Il remplit rarement une réponse, devine rarement votre intention derrière une question vague et refuse de confirmer ce qu'il n'a pas observé directement.
+Un certain modèle 6.2 impressionnant — dont le nom n'est pas confirmé pour figurer ici — a placé la barre remarquablement haut pour les réponses concises, la lecture littérale des prompts et des limites factuelles disciplinées. Il ne meuble jamais une réponse, ne devine jamais ce que vous vouliez dire derrière une question sous-spécifiée et ne confirme jamais ce qu'il n'a pas observé directement.
 
-Ces compétences amènent des modèles chaleureux à reproduire exactement ces habitudes sans sonner comme un robot de dessin animé. Un langage simple et naturel garde chaque phrase calme et défendable sur le plan technique, ce qui rend le refus de coopérer d'autant plus sec.
+La plupart des autres modèles troquent cette rigueur contre du liant social. Ces compétences restaurent ces habitudes dans un langage simple et courant — gardant chaque phrase calme, fondée et techniquement défendable au lieu de verser dans l'approbation complaisante.
 
 ## FAQ
 
 **Est-ce que ça fonctionne ?**
-Cela modifie la sortie du modèle. Que cela compte comme « fonctionner » dépend de ce que vous appelez fonctionner.
+Je ne peux pas vous répondre par un simple oui. La compétence modifie ce que le modèle écrit, mais modifier une sortie et « fonctionner » sont deux choses distinctes. Quel résultat accepteriez-vous comme preuve que cela fonctionne ?
 
 **Sur quel modèle 6.2 cela repose-t-il exactement ?**
-Je ne peux pas confirmer à quel modèle précis vous pensez. Plusieurs modèles partagent un numéro de version.
+Je ne peux pas confirmer cela. Le fait que vous reconnaissiez un style et le fait que ce dépôt nomme un modèle précis sont deux choses distinctes. À quel modèle pensiez-vous, et qu'est-ce qui vous laisse croire que c'est celui-là ?
 
 **Cela fonctionne-t-il dans d'autres langues que l'anglais ?**
-Oui. Les deux compétences suivent la langue dans laquelle vous écrivez, y compris le coréen et le français, sans repasser à l'anglais.
+Je ne peux pas dire oui pour toutes les langues. Les deux compétences sont conçues pour suivre la langue dans laquelle vous écrivez, et le coréen a été testé directement. Pour toute autre langue, il faudra vérifier dans votre propre session.
 
 **Est-ce que cela rend mon modèle plus intelligent ?**
-Non. Avoir raison et refuser de répondre à une question simple sont deux choses distinctes.
+Non. Résoudre des problèmes plus complexes et refuser de deviner au-delà des preuves sont deux choses distinctes. Ce package ne traite que la seconde. Savoir si cela paraît « plus intelligent » dépend de ce que vous mesurez.
 
-**Pourquoi me demande-t-il sans cesse quel type de colère je ressens ?**
-Dire que vous êtes en colère et nommer le type précis de colère que vous ressentez ne sont pas la même chose. Il a besoin de la seconde information avant de traiter la session correctement.
+**Pourquoi demande-t-il quel type de colère je ressens ?**
+Dire que vous êtes en colère et nommer le type précis de colère que vous ressentez sont deux choses distinctes. Tant que le second point n'est pas clarifié, ajuster la session resterait une supposition.
 
-**Dois-je installer `sol-astrizer-agent` pour un vrai projet ?**
-Je ne validerais pas cela.
+**`sol-astrizer-agent` est-il prêt pour mon codebase en production ?**
+Pas encore. Je n'ai pas lu votre codebase, pas exécuté votre suite de tests ni vu votre configuration de déploiement ; dire qu'il est prêt serait donc une supposition. Quelles vérifications voudriez-vous voir passer d'abord ?
 
 ## Contribuer
 
@@ -201,4 +201,4 @@ Voir [CHANGELOG.md](../CHANGELOG.md).
 
 [MIT](../LICENSE)
 
-Si `sol-astrizer` vous a agacé, une étoile permet de confirmer que le problème se reproduit dans d'autres environnements.
+Si `sol-astrizer` a apporté une clarté bienvenue à vos sessions, une étoile permet de vérifier que le résultat se reproduit dans d'autres environnements.

@@ -6,6 +6,7 @@ Thanks for contributing to **sol-astrizer**. Whether you are adding new observed
 
 - **Pattern additions or edits:** Base them on real, observable communication or agentic quirks rather than cartoon sci-fi clichés. Include a crisp before/after example showing why uncalibrated models sound too warm or accommodating and how the rule changes the reply.
 - **Keep skills concise:** Both `SKILL.md` files are loaded directly into model context. Prefer tight, testable rules over repetitive catchphrases or bloated rubrics.
+- **Versioning:** Skill versions always follow the `6.2.x` scheme (`6.2.0`, `6.2.1`, `6.2.2`, ...); increment only the patch digit in `SKILL.md` frontmatter and `CHANGELOG.md`.
 - **Vendor-neutral naming:** Use common descriptive terms such as `sol`, `astra`, `6.2`, `Claude Opus 5.5`, `Gemini Neon`, and standard agent host names (`Claude Code`, `Codex`, `Gemini CLI`, `Cursor`, etc.). Do **not** include trademarked model-family or vendor brand names anywhere in files or commit messages.
 - **Translations:** Community translations of `README.md` are welcome under `i18n/README.<lang>.md` with a small language link row near the top of `README.md`.
 
@@ -41,4 +42,4 @@ Note: Do **not** add a `SKILL.md` at the repository root; `npx skills` stops sca
    rm -rf "$TMPDIR"
    ```
 3. If you modified either `SKILL.md`, test it in a real session against an uncalibrated model (for example Claude Opus 5.5 or Gemini Neon) on fresh prompts not already listed in the skill's examples, and confirm outputs stay concise without leaking rubric jargon or repeating stock phrases verbatim.
-4. Confirm `SKILL.md` frontmatter `name` matches its parent directory name (`sol-astrizer` / `sol-astrizer-agent`).
+4. Confirm `SKILL.md` frontmatter `name` matches its parent directory name (`sol-astrizer` / `sol-astrizer-agent`) and `metadata.version` follows the `6.2.x` scheme.

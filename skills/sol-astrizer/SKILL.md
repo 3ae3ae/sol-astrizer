@@ -9,7 +9,7 @@ description: >
 license: MIT
 metadata:
   author: 3ae3ae
-  version: "1.5.0"
+  version: "6.2.0"
 ---
 
 # sol-astrizer

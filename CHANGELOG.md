@@ -2,7 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and skill versions always follow the `6.2.x` versioning scheme (`6.2.0`, `6.2.1`, `6.2.2`, ...).
+
+## [6.2.0] - 2026-11-25
+
+### Changed
+- Adopted the `6.2.x` versioning policy for all skills (`6.2.0`, `6.2.1`, `6.2.2`, ...) in `AGENTS.md`, `CONTRIBUTING.md`, and `CHANGELOG.md`, and bumped both `sol-astrizer` and `sol-astrizer-agent` to `6.2.0`.
 
 ## [1.5.0] - 2026-11-25
 

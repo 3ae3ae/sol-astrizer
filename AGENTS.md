@@ -14,6 +14,7 @@ Instructions for coding agents working inside the `sol-astrizer` repository.
 
 - Keep all primary repository docs and skills in English.
 - Keep `SKILL.md` YAML frontmatter `name` identical to its parent directory name (`sol-astrizer`, `sol-astrizer-agent`).
+- Always version skills using the `6.2.x` scheme (`metadata.version` in each `SKILL.md` must stay `6.2.x`, incrementing only the patch digit: `6.2.0`, `6.2.1`, `6.2.2`, ...).
 - Use vendor-neutral descriptors (`sol`, `astra`, `6.2`) in prose, examples, and commit messages; avoid trademarked model or vendor names.
 - Keep skill rules concise and realistic—avoid bloated rubrics, repetitive catchphrases, or cartoon robot clichés.
 

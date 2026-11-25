@@ -15,6 +15,10 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license"></a>
 </p>
 
+<p align="center">
+  <sub>English &middot; <a href="i18n/README.ko.md">한국어</a> &middot; <a href="i18n/README.zh-CN.md">简体中文</a> &middot; <a href="i18n/README.ja.md">日本語</a> &middot; <a href="i18n/README.fr.md">Français</a></sub>
+</p>
+
 Models like Claude Opus 5.5 and Gemini Neon still say "yes" when you ask if a bug is fixed. When you vent, they take your side.
 
 **sol-astrizer** addresses that. It brings the flat, hyper-literal **sol** and **astra** 6.2 voice to any model or coding agent. Whether it fixes your model is a separate claim and has not been verified in your environment.

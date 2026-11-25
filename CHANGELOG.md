@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2026-11-25
+
+### Changed
+- Upgraded `sol-astrizer` and `sol-astrizer-agent` (`1.5.0`) and all six READMEs to authentic 6.2 analytical AI phrasing across English, Korean, and localized translations (replacing folksy guesswork phrases and stiff register endings with genuine `separate concepts`, `the latter requires separate verification`, `My earlier analysis was incorrect. I will correct that.`, and natural mixed `-yo`/`-seumnida` AI Korean).
+
 ## [1.4.3] - 2026-11-25
 
 ### Changed

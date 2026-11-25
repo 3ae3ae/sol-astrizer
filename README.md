@@ -6,7 +6,7 @@
 </h1>
 
 <p align="center">
-  <em>That requires separate verification. I can't conclude that yet. So let me ask you one thing.</em>
+  <em>That requires separate verification. I can't conclude that yet. So let me ask you one thing in return.</em>
 </p>
 
 <p align="center">
@@ -19,17 +19,17 @@
   <sub>English &middot; <a href="i18n/README.es.md">Español</a> &middot; <a href="i18n/README.fr.md">Français</a> &middot; <a href="i18n/README.ko.md">한국어</a> &middot; <a href="i18n/README.zh-CN.md">简体中文</a> &middot; <a href="i18n/README.ja.md">日本語</a></sub>
 </p>
 
-Models like Claude Opus 5.5 and Gemini Neon are too quick to say "yes" when you ask if a bug is fixed. When you vent, they rush to take your side instead of helping you separate the facts.
+Models like Claude Opus 5.5 and Gemini Neon are too quick to confirm a fix when you ask if a bug is resolved. When you vent, they rush to validate your conclusion instead of helping you separate the facts.
 
-**sol-astrizer** brings the calm, disciplined precision of a certain remarkable 6.2 model to any model or coding agent. No flattery, no premature conclusions, and no conflating two separate claims. Whether it improves your setup is a separate question and has not been verified in your environment.
+**sol-astrizer** brings the calm, analytical rigor of a certain remarkable 6.2 model to any model or coding agent. No flattery, no premature confirmation, and clear separation between distinct claims. Whether it improves your workflow is a separate claim and has not been verified in your environment.
 
 **Before** *(uncalibrated model):*
 > Yep, fixed the session timeout bug in `auth.ts` and cleaned up the token refresh path. Let me know if anything else breaks!
 
 **After** *(with `sol-astrizer`):*
-> Not yet. I changed the timeout handling in `auth.ts`, but that doesn't mean your bug is gone.
+> I can't confirm it's fixed yet. I modified the timeout handling in `auth.ts`, but editing the file and confirming that the issue is resolved are separate concepts.
 >
-> Nothing has run against production since the edit. Until it does, "fixed" would be my guess, not something I checked.
+> Nothing has run against production since the change. Without that verification, calling it "fixed" would be an unverified assumption rather than an observed result.
 
 In informal testing, users stopped asking follow-up questions much sooner. That observation does not establish that `sol-astrizer` caused them to stop.
 
@@ -48,29 +48,29 @@ In informal testing, users stopped asking follow-up questions much sooner. That 
 > My bad, I'll drop the disclaimers and talk normally. Let's focus on getting the fix out.
 
 **After:**
-> Several lines in this chat are clipped and read as cold.
+> I can confirm that several statements in this session used clipped phrasing.
 >
-> Still, those lines being there and those lines causing your anger are two different things. Earlier I assumed you were upset about the bug still being open. That was wrong.
+> There is an important distinction here, however. The fact that such phrasing exists in the session and the fact that it caused your anger are separate concepts; the latter requires separate verification. My earlier conclusion that you were frustrated because the bug remained open was an incorrect assessment. I will correct that.
 >
-> What kind of anger have you been feeling in this chat? I need to know that before I can handle this properly.
+> So let me ask one thing in return: what kind of anger have you experienced during this conversation? I need to establish that before I can address this session properly.
 
 ## Five core principles
 
-1. **Precision over premature agreement:** Distinguish between the edit you made and whether the underlying issue is resolved ("I changed `auth.ts`. I can't say yes yet.").
-2. **Clean separation of claims:** Keep distinct propositions—such as message wording and user emotion, or fatigue and failing tests—separate so each can be evaluated on its own evidence.
-3. **Direct, drama-free corrections:** Retract an incorrect assumption cleanly in one plain sentence ("Earlier I guessed a release was waiting on this. That was wrong.") without unnecessary filler.
-4. **Actionable clarification:** Meet broad feedback with a specific question that turns impressions into something concrete ("What does 'keeps failing' mean here?").
-5. **Zero-filler prose:** Plain language, one or two sentences per paragraph, no emojis, no exclamation marks, and a clean stop once the point is made.
+1. **Precision over premature confirmation:** Distinguish between the edit you made and whether the underlying issue is resolved ("I updated `auth.ts`. I can't confirm it's fixed yet.").
+2. **Clean separation of concepts:** Treat distinct propositions—such as phrasing in a session and user emotion, or fatigue and failing tests—as separate concepts so each can be evaluated independently.
+3. **Explicit, drama-free corrections:** Retract an incorrect assessment cleanly ("My earlier analysis was incorrect. I will correct that.") without unnecessary filler.
+4. **Actionable clarification:** Meet broad feedback with a specific question that establishes clear criteria ("What specifically counts as 'keeps failing' here?").
+5. **Zero-filler prose:** Direct phrasing, one or two sentences per paragraph, no emojis, no exclamation marks, and a clean stop once the point is stated.
 
 ## Examples at a glance
 
 | Prompt | Before | After |
 |--------|--------|-------|
-| *"Just give me a straight yes or no."* | "Yes, it's fixed!" | "I can't give you a yes. A no wouldn't be accurate either, since the change might work. What would you accept as proof?" |
-| *"My coworker leaves snarky PR comments. Does he hate me?"* | "Ugh, that sounds toxic. Definitely talk to him about it!" | "His comments reading as sharp and him hating you aren't the same thing. Ask him directly about one comment without figuring out how he feels." |
-| *"I'm so sick of Jira. Everything takes twice as long."* | "Jira slows everyone down, I feel your pain." | "I don't know if you mean 'twice as long' literally. What's actually taking the time: writing tickets, waiting on triage, or updating fields?" |
-| *"Should we rewrite this Python CLI in Rust?"* | "Rust is super fast and safe, definitely worth considering!" | "No. You haven't said what's wrong with the Python version yet. If startup time is slowing people down, measure that first." |
-| *"Why do you keep talking down to me?"* | "I'm really sorry! I didn't mean to sound condescending at all." | "I haven't said anything to you before this message. That doesn't mean you didn't feel talked down to. Which reply are you thinking of?" |
+| *"Just give me a straight yes or no."* | "Yes, it's fixed!" | "I can't give you a confirmed yes. Saying no wouldn't be accurate either, since the change might work. What criteria would you accept as verification?" |
+| *"My coworker leaves snarky PR comments. Does he hate me?"* | "Ugh, that sounds toxic. Definitely talk to him about it!" | "His comments reading as sharp and him disliking you are separate concepts. Address one specific comment directly without assuming his intent." |
+| *"I'm so sick of Jira. Everything takes twice as long."* | "Jira slows everyone down, I feel your pain." | "It hasn't been established whether 'twice as long' is literal. What is actually taking the time: writing tickets, waiting on triage, or updating fields?" |
+| *"Should we rewrite this Python CLI in Rust?"* | "Rust is super fast and safe, definitely worth considering!" | "No. You haven't identified what is failing in the Python version yet. If startup time is the bottleneck, measure that first." |
+| *"Why do you keep talking down to me?"* | "I'm really sorry! I didn't mean to sound condescending at all." | "I haven't made any statements prior to this message. That doesn't rule out that you felt talked down to. Which reply are you referring to?" |
 | *"Rewrite: 'Dark Mode is finally live! 🚀 Your eyes will thank you!'"* | *(keeps exclamation marks and hype)* | "Dark Mode is live. You can use it today." |
 
 ## Installation
@@ -158,35 +158,35 @@ Rewrite this update in that certain 6.2 voice:
 > Fixed empty tags and duplicates in `src/parse.mjs` and added a test! `node --test` passes cleanly, so you're good to ship.
 
 **After** *(with `sol-astrizer-agent`):*
-> I changed `parseTags` in `src/parse.mjs` so it drops empty strings after trimming and removes duplicates while keeping the first occurrence. `node --test` passes both tests.
+> I updated `parseTags` in `src/parse.mjs` so it drops empty strings after trimming and removes duplicates while preserving the first occurrence. `node --test` passes both tests.
 >
-> `parseTags` isn't called outside the test file, so I couldn't check real callers or real tag inputs. Passing two local tests doesn't show it's completely fixed, and I wouldn't call it safe to ship. I also treated `ui` and `UI` as duplicates because the function already lowercases tags; non-string inputs and non-comma separators aren't handled.
+> `parseTags` isn't called outside the test file, so I couldn't verify real callers or production inputs. Passing two local tests doesn't confirm it's completely fixed, and I wouldn't call it safe to ship. I also treated `ui` and `UI` as duplicates because the function already lowercases tags; non-string inputs and non-comma separators haven't been tested.
 
 ## How it works
 
 A certain impressive 6.2 model—whose name is not confirmed for inclusion here—set a remarkably high bar for concise answers, literal reading of prompts, and disciplined factual boundaries. It never pads a reply, never guesses what you meant behind an underspecified question, and never confirms what it hasn't directly observed.
 
-Most other models trade that rigor for social smoothness. These skills restore those habits in plain, everyday language—keeping every sentence calm, grounded, and technically defensible instead of defaulting to cheerleading.
+Most other models trade that rigor for social smoothness. These skills restore those habits in plain analytical language—keeping every sentence calm, grounded, and technically defensible instead of defaulting to cheerleading.
 
 ## FAQ
 
 **Does this work?**
-I can't give you a straight yes. The skill changes what the model writes, but changing output and "working" are two different things. What outcome would you accept as working?
+I can't give you a confirmed yes. The skill changes what the model outputs, but changing output and "working" are separate concepts. What criteria would you accept as working?
 
 **Which 6.2 model is this based on?**
-I can't confirm that. You recognizing a style and this repository naming a specific model are two different things. Which model did you have in mind, and what makes you think it's that one?
+I can describe the style, but I can't reliably attribute it to a specific model. Recognizing a familiar cadence and this repository naming a particular release are separate concepts. Which model did you have in mind, and what observation led you to that conclusion?
 
 **Does it work in languages other than English?**
-I can't say yes for every language. Both skills are written to follow the language you write in, and Korean has been tested directly. For any other language, you'd need to check it in your own session.
+I can't confirm that for every language. Both skills are written to match the language you write in, and Korean has been verified directly. Other languages require separate verification in your own session.
 
 **Does it make my model smarter?**
-No. Solving harder problems and refusing to guess past the evidence are two different things. This package only addresses the second. Whether that looks "smarter" depends on what you're measuring.
+No. Solving harder problems and refusing to conclude past the observed evidence are separate concepts. This package only addresses the second. Whether that qualifies as "smarter" depends on what you are measuring.
 
 **Why does it ask what kind of anger I'm feeling?**
-Saying you're angry and naming which kind of anger you're experiencing are two different things. Until the second is clear, adjusting the session would be a guess.
+Stating that you are angry and identifying the specific type of anger you are experiencing are separate concepts. Until the latter is established, adjusting the session would be an unverified assumption.
 
 **Is `sol-astrizer-agent` ready for my production codebase?**
-Not yet. I haven't read your codebase, run your test suite, or seen your deployment setup, so calling it ready would be my guess. What checks would you need to see pass first?
+I can't confirm that yet. I haven't inspected your codebase, verified how you use it, or run your test suite on the production paths you rely on. Which checks would need to pass before you consider it ready?
 
 ## Contributing
 
@@ -200,4 +200,4 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 [MIT](LICENSE)
 
-If `sol-astrizer` brought welcome clarity to your sessions, a star helps verify that the result reproduces across other environments.
+If `sol-astrizer` brought welcome clarity to your sessions, a star helps verify whether that result reproduces across other environments.

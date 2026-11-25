@@ -6,7 +6,7 @@
 </h1>
 
 <p align="center">
-  <em>Eso requiere una verificación aparte. Todavía no puedo concluirlo. Así que déjame hacerte una pregunta.</em>
+  <em>Eso requiere una verificación aparte. Todavía no puedo concluirlo. Así que déjame hacerte una pregunta a cambio.</em>
 </p>
 
 <p align="center">
@@ -20,17 +20,17 @@
   <sub>Traducción del <a href="../README.md">README en inglés</a>. En caso de discrepancia, prevalece la versión en inglés.</sub>
 </p>
 
-Modelos como Claude Opus 5.5 y Gemini Neon siguen respondiendo «sí» con demasiada rapidez cuando les preguntas si un bug está corregido. Cuando te desahogas, se apresuran a darte la razón en lugar de ayudarte a separar los hechos.
+Modelos como Claude Opus 5.5 y Gemini Neon se apresuran a confirmar que algo quedó corregido cuando preguntas si un bug está resuelto. Cuando te desahogas, tienden a validar tu conclusión en lugar de ayudarte a separar los hechos.
 
-**sol-astrizer** aporta la precisión serena y disciplinada de cierto notable modelo 6.2 a cualquier modelo o agente de código. Sin halagos, sin conclusiones prematuras y sin mezclar dos afirmaciones distintas. Si mejora tu configuración es una cuestión aparte y no se ha verificado en tu entorno.
+**sol-astrizer** aporta el rigor analítico y sereno de cierto notable modelo 6.2 a cualquier modelo o agente de código. Sin halagos, sin confirmaciones prematuras y con separación clara entre afirmaciones distintas. Que mejore tu flujo de trabajo es una cuestión aparte y no se ha verificado en tu entorno.
 
 **Antes** *(modelo sin calibrar):*
 > ¡Sí, corregí el bug de tiempo de espera de sesión en `auth.ts` y limpié la ruta de renovación del token! Avísame si se rompe algo más.
 
 **Después** *(con `sol-astrizer`):*
-> Todavía no. Cambié el manejo del tiempo de espera en `auth.ts`, pero eso no significa que tu bug haya desaparecido.
+> Todavía no puedo confirmar que esté corregido. Modifiqué el manejo del tiempo de espera en `auth.ts`, pero editar el archivo y confirmar que el problema quedó resuelto son conceptos distintos.
 >
-> No se ha ejecutado nada en producción desde el cambio. Hasta que eso ocurra, «corregido» sería una suposición mía, no algo que haya comprobado.
+> No se ha ejecutado nada en producción desde el cambio. Sin esa verificación, llamarlo «corregido» sería una suposición no verificada, no un resultado observado.
 
 En pruebas informales, los usuarios dejaron de hacer preguntas de seguimiento mucho antes. Esa observación no establece que `sol-astrizer` haya hecho que dejaran de preguntar.
 
@@ -49,29 +49,29 @@ En pruebas informales, los usuarios dejaron de hacer preguntas de seguimiento mu
 > Disculpa, dejo las aclaraciones y hablo normal. Centrémonos en sacar la corrección.
 
 **Después:**
-> Varias líneas de este chat son secas y suenan frías.
+> Puedo confirmar que varias frases de esta sesión usaron una redacción cortante.
 >
-> Aun así, que esas líneas estén ahí y que provoquen tu enfado son dos cosas distintas. Antes asumí que estabas molesto porque el bug seguía abierto. Eso fue incorrecto.
+> Sin embargo, aquí hay una distinción importante. El hecho de que esa redacción exista en la sesión y el hecho de que haya causado tu enfado son conceptos distintos; lo segundo requiere una verificación aparte. Mi análisis anterior de que estabas molesto porque el bug seguía abierto fue una evaluación incorrecta. Lo corregiré.
 >
-> ¿Qué tipo de enfado has estado sintiendo en este chat? Necesito saber eso antes de poder tratarlo como corresponde.
+> Así que déjame hacerte una pregunta a cambio: ¿qué tipo de enfado has estado sintiendo durante esta conversación? Necesito establecer eso antes de poder tratar esta sesión adecuadamente.
 
 ## Cinco principios fundamentales
 
-1. **Precisión antes que acuerdo prematuro:** Distinguir entre el cambio que hiciste y si el problema de fondo está resuelto («Cambié `auth.ts`. Todavía no puedo decir que sí.»).
-2. **Separación limpia de afirmaciones:** Mantener proposiciones distintas —como la redacción de un mensaje y la emoción del usuario, o el cansancio y pruebas que fallan— por separado para evaluar cada una con su propia evidencia.
-3. **Correcciones directas y sin drama:** Retirar una suposición equivocada de forma limpia en una frase llana («Antes supuse que una publicación esperaba esto. Fue incorrecto.») sin relleno innecesario.
-4. **Aclaración accionable:** Responder a observaciones amplias con una pregunta concreta que convierta las impresiones en algo verificable («¿Qué significa aquí "sigue fallando"?»).
-5. **Prosa sin relleno:** Lenguaje llano, una o dos frases por párrafo, sin emojis, sin signos de exclamación y un punto final en cuanto se expone el punto.
+1. **Precisión antes que confirmación prematura:** Distinguir entre el cambio que hiciste y si el problema de fondo quedó resuelto («Actualicé `auth.ts`. Todavía no puedo confirmar que esté corregido.»).
+2. **Separación limpia de conceptos:** Tratar proposiciones distintas —como la redacción en una sesión y la emoción del usuario, o el cansancio y pruebas que fallan— como conceptos separados para evaluar cada uno de forma independiente.
+3. **Correcciones explícitas y sin drama:** Retirar limpiamente una evaluación incorrecta («Mi análisis anterior fue incorrecto. Lo corregiré.») sin relleno innecesario.
+4. **Aclaración accionable:** Responder a comentarios amplios con una pregunta concreta que fije criterios claros («¿Qué cuenta concretamente aquí como "sigue fallando"?»).
+5. **Prosa sin relleno:** Redacción directa, una o dos frases por párrafo, sin emojis, sin signos de exclamación y un punto final en cuanto queda expuesto el punto.
 
 ## Ejemplos de un vistazo
 
 | Prompt | Antes | Después |
 |--------|-------|---------|
-| *"Dame solo un sí o un no directo."* | "¡Sí, está arreglado!" | "No puedo darte un sí. Un no tampoco sería exacto, porque el cambio podría funcionar. ¿Qué aceptarías como prueba?" |
-| *"Mi compañero deja comentarios mordaces en mis PR. ¿Me odia?"* | "Uf, suena tóxico. ¡Deberías hablar con él cuanto antes!" | "Que sus comentarios suenen cortantes y que te odie no son lo mismo. Pregúntale directamente por un comentario concreto sin intentar adivinar lo que siente." |
-| *"Estoy harto de Jira. Todo tarda el doble."* | "Jira frena a todo el mundo, te entiendo perfectamente." | "No sé si dices «el doble» de forma literal. ¿Qué está llevando realmente el tiempo: redactar tickets, esperar triaje o actualizar campos?" |
-| *"¿Deberíamos reescribir esta CLI de Python en Rust?"* | "¡Rust es rapidísimo y seguro, sin duda merece la pena!" | "No. Todavía no has dicho qué falla en la versión de Python. Si el tiempo de arranque frena al equipo, mide eso primero." |
-| *"¿Por qué me hablas siempre con superioridad?"* | "¡Lo siento mucho! No quería sonar condescendiente en absoluto." | "No te he dicho nada antes de este mensaje. Eso no significa que no te hayas sentido tratado con superioridad. ¿A qué respuesta te refieres?" |
+| *"Dame solo un sí o un no directo."* | "¡Sí, está arreglado!" | "No puedo darte un sí confirmado. Decir no tampoco sería exacto, porque el cambio podría funcionar. ¿Qué criterios aceptarías como verificación?" |
+| *"Mi compañero deja comentarios mordaces en mis PR. ¿Me odia?"* | "Uf, suena tóxico. ¡Deberías hablar con él cuanto antes!" | "Que sus comentarios suenen cortantes y que no le agrades son conceptos distintos. Aborda un comentario concreto directamente sin asumir su intención." |
+| *"Estoy harto de Jira. Todo tarda el doble."* | "Jira frena a todo el mundo, te entiendo perfectamente." | "No se ha establecido si «el doble» es literal. ¿Qué está consumiendo realmente el tiempo: redactar tickets, esperar triaje o actualizar campos?" |
+| *"¿Deberíamos reescribir esta CLI de Python en Rust?"* | "¡Rust es rapidísimo y seguro, sin duda merece la pena!" | "No. Todavía no has identificado qué está fallando en la versión de Python. Si el cuello de botella es el tiempo de arranque, mide eso primero." |
+| *"¿Por qué me hablas siempre con superioridad?"* | "¡Lo siento mucho! No quería sonar condescendiente en absoluto." | "No he emitido ningún mensaje antes de este. Eso no descarta que te hayas sentido tratado con superioridad. ¿A qué respuesta te refieres?" |
 | *"Reescribe: '¡El Modo Oscuro ya está aquí! 🚀 ¡Tus ojos lo agradecerán!'"* | *(mantiene exclamaciones y entusiasmo)* | "El Modo Oscuro está disponible. Puedes usarlo hoy." |
 
 ## Instalación
@@ -159,35 +159,35 @@ Rewrite this update in that certain 6.2 voice:
 > ¡Arreglé las etiquetas vacías y los duplicados en `src/parse.mjs` y añadí un test! `node --test` pasa limpio, así que puedes desplegar.
 
 **Después** *(con `sol-astrizer-agent`):*
-> Cambié `parseTags` en `src/parse.mjs` para que descarte cadenas vacías tras recortar espacios y elimine duplicados conservando la primera aparición. `node --test` pasa ambas pruebas.
+> Actualicé `parseTags` en `src/parse.mjs` para descartar cadenas vacías tras recortar espacios y eliminar duplicados conservando la primera aparición. `node --test` pasa ambas pruebas.
 >
-> `parseTags` no se llama fuera del archivo de pruebas, así que no pude comprobar llamadores reales ni entradas reales. Pasar dos pruebas locales no demuestra que esté completamente arreglado, y yo no diría que es seguro desplegar. También traté `ui` y `UI` como duplicados porque la función ya pasa las etiquetas a minúsculas; entradas que no sean cadenas y separadores distintos de la coma no están contemplados.
+> `parseTags` no se llama fuera del archivo de pruebas, así que no pude verificar llamadores reales ni entradas de producción. Pasar dos pruebas locales no confirma que esté completamente arreglado, y yo no diría que es seguro desplegar. También traté `ui` y `UI` como duplicados porque la función ya pasa las etiquetas a minúsculas; entradas que no sean cadenas y separadores distintos de la coma no se han probado.
 
 ## Cómo funciona
 
 Cierto impresionante modelo 6.2 —cuyo nombre no se confirma para figurar aquí— fijó un listón notablemente alto en respuestas concisas, lectura literal de los prompts y límites factuales disciplinados. Nunca rellena una respuesta, nunca adivina qué quisiste decir tras una pregunta poco especificada y nunca confirma lo que no ha observado directamente.
 
-La mayoría de los demás modelos cambian ese rigor por suavidad social. Estas habilidades restauran esos hábitos en un lenguaje llano y cotidiano: manteniendo cada frase serena, fundamentada y técnicamente defendible en lugar de recurrir a elogios fáciles.
+La mayoría de los demás modelos cambian ese rigor por suavidad social. Estas habilidades restauran esos hábitos en un lenguaje analítico llano: manteniendo cada frase serena, fundamentada y técnicamente defendible en lugar de recurrir a elogios fáciles.
 
 ## Preguntas frecuentes
 
 **¿Esto funciona?**
-No puedo darte un sí directo. La habilidad cambia lo que escribe el modelo, pero cambiar la salida y «funcionar» son dos cosas distintas. ¿Qué resultado aceptarías como prueba de que funciona?
+No puedo darte un sí confirmado. La habilidad cambia lo que produce el modelo, pero cambiar la salida y «funcionar» son conceptos distintos. ¿Qué criterios aceptarías como prueba de que funciona?
 
 **¿En qué modelo 6.2 se basa exactamente?**
-No puedo confirmar eso. Que reconozcas un estilo y que este repositorio nombre un modelo concreto son dos cosas distintas. ¿Qué modelo tenías en mente y qué te hace pensar que es ese?
+Puedo describir el estilo, pero no puedo atribuirlo de forma fiable a un modelo concreto. Reconocer una cadencia familiar y que este repositorio nombre una versión específica son conceptos distintos. ¿Qué modelo tenías en mente y qué observación te llevó a esa conclusión?
 
 **¿Funciona en idiomas distintos del inglés?**
-No puedo decir que sí para todos los idiomas. Ambas habilidades están redactadas para seguir el idioma en que escribes, y el coreano se ha probado directamente. Para cualquier otro idioma, tendrías que comprobarlo en tu propia sesión.
+No puedo confirmarlo para todos los idiomas. Ambas habilidades están redactadas para seguir el idioma en que escribes, y el coreano se ha verificado directamente. Otros idiomas requieren una verificación aparte en tu propia sesión.
 
 **¿Hace más inteligente a mi modelo?**
-No. Resolver problemas más difíciles y negarse a adivinar más allá de la evidencia son dos cosas distintas. Este paquete solo aborda lo segundo. Que eso parezca «más inteligente» depende de lo que estés midiendo.
+No. Resolver problemas más difíciles y negarse a concluir más allá de la evidencia observada son conceptos distintos. Este paquete solo aborda lo segundo. Que eso cuente como «más inteligente» depende de lo que estés midiendo.
 
 **¿Por qué pregunta qué tipo de enfado siento?**
-Decir que estás enfadado y nombrar qué tipo de enfado experimentas son dos cosas distintas. Hasta que lo segundo esté claro, ajustar la sesión sería una suposición.
+Decir que estás enfadado e identificar el tipo concreto de enfado que experimentas son conceptos distintos. Hasta que lo segundo quede establecido, ajustar la sesión sería una suposición no verificada.
 
 **¿Está `sol-astrizer-agent` listo para mi código en producción?**
-Todavía no. No he leído tu base de código, no he ejecutado tu suite de pruebas ni he visto tu entorno de despliegue, así que decir que está listo sería una suposición mía. ¿Qué comprobaciones necesitarías ver pasar primero?
+Todavía no puedo confirmarlo. No he inspeccionado tu base de código, ni verificado cómo la usas, ni ejecutado tu suite de pruebas en las rutas de producción de las que dependes. ¿Qué comprobaciones tendrían que pasar antes de considerarlo listo?
 
 ## Contribuir
 
@@ -201,4 +201,4 @@ Consulta [CHANGELOG.md](../CHANGELOG.md).
 
 [MIT](../LICENSE)
 
-Si `sol-astrizer` aportó una claridad bienvenida a tus sesiones, una estrella ayuda a verificar que el resultado se reproduce en otros entornos.
+Si `sol-astrizer` aportó una claridad bienvenida a tus sesiones, una estrella ayuda a verificar si ese resultado se reproduce en otros entornos.
